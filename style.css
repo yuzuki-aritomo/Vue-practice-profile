@@ -2,12 +2,12 @@
     margin: 0;
     padding: 0;
 }
-html, body, div{
+html, body,section{
     height: 100%;
+    background-color: #282828;
 }
-#main{
+#top{
     width: 100%;
-    background-color: #19191A;
     padding-top: 30px;
 }
 nav{
@@ -29,4 +29,49 @@ nav a{
 }
 nav a:hover{
     color: #fff;
+}
+#main{
+    display: flex;
+    padding-top: 30px;
+}
+.main-left{
+    width: 70%;
+}
+.terminal-top{
+    width: 100%;
+    background-color: #ACACAC;
+    height: 30px;
+    color: #fff;
+    text-align: center;
+}
+.terminal{
+    color: #fff;
+    width: 25%;
+    border: solid 2px #ACACAC;
+    background-color: #19191A;
+    padding-bottom: 200px;
+}
+.terminal-main{
+    padding: 10px;
+}
+.art{
+    font-weight: 100;
+    line-height: 110%;
+    color:aqua;
+}
+.comand b{
+    color: chartreuse;
+    font-size: 16px;
+    font-weight: 300;
+    margin-right: 10px;
+}
+.comand input[type="text"] {
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    outline: none;
+    background: none;
+    color: #fff;
+    font-size: 16px;
+    letter-spacing: 2px;
 }
