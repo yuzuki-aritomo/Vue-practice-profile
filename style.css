@@ -5,8 +5,28 @@
 html, body, div{
     height: 100%;
 }
-#app{
+#main{
     width: 100%;
-
-    background-color: black;
+    background-color: #19191A;
+    padding-top: 30px;
+}
+nav{
+    height: 60px;
+    width: 60%;
+    margin: 0 auto;
+    background-color: #ACACAC;
+    border-radius: 30px;
+    display: flex;
+}
+nav a{
+    display: block;
+    height: 60px;
+    width: 50%;
+    text-align: center;
+    line-height: 60px;
+    color: #19191A;
+    text-decoration: none;
+}
+nav a:hover{
+    color: #fff;
 }
