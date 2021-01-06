@@ -65,6 +65,12 @@ nav a:hover{
     font-weight: 300;
     margin-right: 10px;
 }
+.comand .c-white{
+    color: #fff;
+}
+.comand p{
+    white-space: pre-line;
+}
 .comand input[type="text"] {
     padding: 0;
     border: none;

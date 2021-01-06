@@ -22,7 +22,6 @@
                     <p>hudai@sda00011</p>
                 </div>
                 <div class="terminal-main">
-                    <!-- tenplete -->
                     <div>
                         <p class="art">
                             -----------------------------------------<br>
@@ -33,9 +32,13 @@
                             -----------------------------------------
                         </p>
                     </div>
+                    <div class="comand" v-for="command in commands">
+                        <b>hudai@sda00011 :~$ </b><b class="c-white">{{ command.com }}</b>
+                        <p>{{ command.log }}</p>
+                    </div>
                     <div class="comand">
                         <b>hudai@sda00011 :~$ </b>
-                        <input type="text" v-on:keyup.enter="submit" v-model="name">
+                        <input type="text" v-on:keyup.enter="submit" v-model="Command">
                     </div>
                 </div>
             </div>
