@@ -6,12 +6,26 @@ html, body,section{
     height: 100%;
     background-color: #282828;
 }
+
+.c-red{
+    color: red;
+}
+.c-green{
+    color: green;
+}
+.c-yellow{
+    color: yellow;
+}
+
+
+
+
 #top{
     width: 100%;
-    padding-top: 30px;
+    padding-top: 20px;
 }
 nav{
-    height: 60px;
+    height: 40px;
     width: 60%;
     margin: 0 auto;
     background-color: #ACACAC;
@@ -20,10 +34,10 @@ nav{
 }
 nav a{
     display: block;
-    height: 60px;
+    height: 40px;
     width: 50%;
     text-align: center;
-    line-height: 60px;
+    line-height: 40px;
     color: #19191A;
     text-decoration: none;
 }
@@ -33,10 +47,47 @@ nav a:hover{
 #main{
     display: flex;
     padding-top: 30px;
+    height: 90%;
+    align-items: flex-start;
 }
+
+/* -------main-left---------- */
+
 .main-left{
     width: 70%;
+    height: 100%;
+    text-align: center;
 }
+.main-l-top{
+    height: 15px;
+    width: 85%;
+    margin: 0 auto;
+    background-color: #ACACAC;
+    display: flex;
+}
+.main-l-top p{
+    line-height: 15px;
+    font-size: 14px;
+    margin-right: 5px;
+}
+
+.main-left iframe{
+    width: 85%;
+    height: 95%;
+}
+.main-left img{
+    width: 85%;
+    /* height: 95%; */
+}
+
+
+
+
+
+
+
+/* ---------main-right--------- */
+
 .terminal-top{
     width: 100%;
     background-color: #ACACAC;
@@ -50,6 +101,8 @@ nav a:hover{
     border: solid 2px #ACACAC;
     background-color: #19191A;
     padding-bottom: 200px;
+    box-sizing: border-box;
+    min-width: 320px;
 }
 .terminal-main{
     padding: 10px;

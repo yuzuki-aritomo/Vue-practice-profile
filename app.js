@@ -6,7 +6,8 @@
             name: " ",
             commands:[
             ],
-            Command: ""
+            Command: "",
+            imageName: "img/default.png"
         },
         methods: {
             submit: function(){
@@ -20,6 +21,13 @@
                             com: A,
                             log: "clear　画面をクリアします\nls ",
                         });
+                        break
+                    case "profile":
+                        this.commands.push({
+                            com: A,
+                            log:"プロフィール写真を表示します"
+                        });
+                        this.imageName = "img/profile.jpg"
                         break
                     default:
                         this.commands.push({
