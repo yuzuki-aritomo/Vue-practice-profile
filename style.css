@@ -17,9 +17,6 @@ html, body,section{
     color: yellow;
 }
 
-
-
-
 #top{
     width: 100%;
     padding-top: 20px;
@@ -77,13 +74,7 @@ nav a:hover{
 }
 .main-left img{
     width: 85%;
-    /* height: 95%; */
 }
-
-
-
-
-
 
 
 /* ---------main-right--------- */

@@ -21,9 +21,8 @@
                     <p class="c-yellow">●</p>
                     <p class="c-green">●</p>
                 </div>
-                <!-- <iframe src="https://ja.wikipedia.org/wiki/SS" frameborder="0"></iframe> -->
-                <!-- <img src="img/profile.jpg" alt=""> -->
-                <img v-bind:src="imageName" alt="">
+                <img v-if="show==true" v-bind:src="imageName" alt="">
+                <iframe v-if="show==false" v-bind:src="webUrl" frameborder="0"></iframe>
             </div>
             <div class="terminal">
                 <div class="terminal-top">
