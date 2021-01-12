@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <div id="top">
+            <nav>
+                <a href="/Cui.html">CUI</a>
+                <a href="/Gui.html">GUI</a>
+            </nav>
+        </div>
+        <div id="main">
+            <div class="main-left">
+                <div class="main-l-top">
+                    <p class="c-red">●</p>
+                    <p class="c-yellow">●</p>
+                    <p class="c-green">●</p>
+                </div>
+                <img v-if="show==true" v-bind:src="imageName" alt="">
+                <iframe v-if="show==false" v-bind:src="webUrl" frameborder="0"></iframe>
+            </div>
+            <div class="terminal">
+                <div class="terminal-top">
+                    <p>hudai@sda00011</p>
+                </div>
+                <div class="terminal-main">
+                    <div>
+                        <p class="art">
+                            -----------------------------------------<br>
+                            |　　∧＿∧　　　／￣￣￣￣￣　　　&nbsp;|<br>
+                            |　（ ´･ω･)　＜　Welcome to　　　|<br>
+                            |　（ つ旦と）　 ＼＿＿＿＿＿　　　&nbsp;|<br>
+                            |　と＿）＿）　　　　　　　　　　　|<br>
+                            -----------------------------------------
+                        </p>
+                    </div>
+                    <div class="comand" v-for="command in commands">
+                        <b>hudai@sda00011 :~$ </b><b class="c-white">{{ command.com }}</b>
+                        <p>{{ command.log }}</p>
+                    </div>
+                    <div class="comand">
+                        <b>hudai@sda00011 :~$ </b>
+                        <input type="text" v-on:keyup.enter="submit" v-model="Command">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script src="app.js"></script>
+</body>
+</html>
