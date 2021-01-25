@@ -97,6 +97,8 @@ nav a:hover{
     padding-bottom: 200px;
     box-sizing: border-box;
     min-width: 320px;
+    box-shadow: 0 0 20px #19191A;
+    border-radius: 5px;
 }
 .terminal-main{
     padding: 10px;
@@ -139,6 +141,8 @@ nav a:hover{
     min-width: 320px;
     height: 500px;
     position: relative;
+    box-shadow: 0 0 20px #19191A;
+    border-radius: 5px;
 }
 table , td{
 	border: 1px solid #595959;
