@@ -7,7 +7,7 @@ html, body,section{
     background-color: #282828;
 }
 section{
-    background-image: url(img/back.png);
+    background-image: url("img/back.png");
 }
 
 .c-red{
