@@ -23,30 +23,61 @@
                 <img v-if="show==true" v-bind:src="imageName" alt="">
                 <iframe v-if="show==false" v-bind:src="webUrl" frameborder="0"></iframe>
             </div>
-            <div class="terminal">
-                <div class="terminal-top">
-                    <p>hudai@sda00011</p>
+            <div id="gui-right">
+                <transition name="fade">
+                    <div v-if="win==true" class="gui-img" v-on:click="start">
+                        <img src="/img/logo-1.png" alt="">
+                    </div>
+                </transition>
+                <div class="table-1" v-if="table==true">
+                    <table class="t-1">
+                        <tbody>
+                            <tr>
+                                <td v-on:click="showWeb">show web page</td>
+                                <td v-on:click="showProfile">show profile</td>
+                            </tr>
+                            <tr>
+                                <td v-on:click="shutDown">shut down</td>
+                                <td>　　★★★★　　　★★★★<br>
+                                    　★　　　　★　★　　　　★<br>
+                                    　★　･*･ ∧_∧★∧_∧･*･　★<br>
+                                    　★　’.　(｡･ω･)(･ω･｡)　’　★<br>
+                                    　　★　’･|　つ♥と　|･’　★<br>
+                                    　　　★　*ﾟ’･｡°｡･ﾟ’*　★<br>
+                                    　　　￣￣￣￣￣￣￣￣
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-                <div class="terminal-main">
-                    <div>
-                        <p class="art">
-                            -----------------------------------------<br>
-                            |　　∧＿∧　　　／￣￣￣￣￣　　　&nbsp;|<br>
-                            |　（ ´･ω･)　＜　Welcome to　　　|<br>
-                            |　（ つ旦と）　 ＼＿＿＿＿＿　　　&nbsp;|<br>
-                            |　と＿）＿）　　　　　　　　　　　|<br>
-                            -----------------------------------------
-                        </p>
-                    </div>
-                    <div class="comand" v-for="command in commands">
-                        <b>hudai@sda00011 :~$ </b><b class="c-white">{{ command.com }}</b>
-                        <p>{{ command.log }}</p>
-                    </div>
-                    <div class="comand">
-                        <b>hudai@sda00011 :~$ </b>
-                        <input type="text" v-on:keyup.enter="submit" v-model="Command">
-                    </div>
+                <div v-if="tableProfile==true" class="table-2">
+                    <table class="t-2">
+                        <tbody>
+                            <tr>
+                                <td v-on:click="pro_about">about</td>
+                                <td v-on:click="pro_hobby">hobby</td>
+                            </tr>
+                            <tr>
+                                <td v-on:click="pro_book">book</td>
+                                <td v-on:click="pro_back">back</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
+                <div v-if="tableWeb==true" class="table-2">
+                    <table class="t-2">
+                        <tbody>
+                            <tr>
+                                <td v-on:click="web_osakahu">大阪府立大学ホームページ</td>
+                                <td v-on:click="web_y">wikipedia 大阪府立大学</td>
+                            </tr>
+                            <tr>
+                                <td v-on:click="web_g">公立大学法人大阪</td>
+                                <td v-on:click="web_back">back</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
             </div>
         </div>
     </section>

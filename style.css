@@ -6,6 +6,9 @@ html, body,section{
     height: 100%;
     background-color: #282828;
 }
+section{
+    background-image: url(img/back.png);
+}
 
 .c-red{
     color: red;
@@ -124,4 +127,89 @@ nav a:hover{
     color: #fff;
     font-size: 16px;
     letter-spacing: 2px;
+}
+
+/* --------gui right-------- */
+#gui-right{
+    color: #fff;
+    width: 25%;
+    border: solid 2px #ACACAC;
+    background-color: #19191A;
+    box-sizing: border-box;
+    min-width: 320px;
+    height: 500px;
+    position: relative;
+}
+table , td{
+	border: 1px solid #595959;
+    border-collapse: collapse;
+    text-align: center;
+}
+table, tbody{
+    width: 100%;
+    height: 100%;
+}
+td{
+	/* width: 30px;
+    height: 25px; */
+    width: 50%;
+}
+tr{
+    height: 50%;
+}
+th {
+	background: #f0e6cc;
+}
+.even {
+	background: #fbf8f0;
+}
+.odd {
+	background: #fefcf9;
+}
+.table-1{
+    background-color: #19191A;
+    z-index: 50;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.table-1 td, .table-2 td{
+    transition: all 1s;
+} 
+.table-1 td:hover, .table-2 td:hover{
+    background-color: #595959;
+    cursor: pointer;
+}
+.table-2{
+    background-color: #19191A;
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.gui-img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 300px;
+    z-index: 100;
+}
+.gui-img img{
+    margin-top: 150px;
+    height: 200px;
+}
+
+.fade-enter-active, .fade-leave-active {
+    transition: opacity 1.5s;
+}
+  .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+    opacity: 0;
 }

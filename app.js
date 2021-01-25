@@ -8,9 +8,16 @@
             Command: "",
             imageName: "img/default.png",
             webUrl: "https://www.osakafu-u.ac.jp/",
-            show: true
+            show: true,
+            win: true,
+            table: true,
+            tableProfile: false,
+            tableWeb: false,
         },
         methods: {
+            // ------------------------------
+            // -------cuiの処理--------------
+            // ------------------------------
             submit: function(){
                 var co = this.Command;
                 var C = this.Command.split(" ");
@@ -120,7 +127,60 @@
                         });
                 };
                 this.Command = "";
-            }
+            },
+            // ------------------------------
+            // -------guiの処理--------------
+            // ------------------------------
+            start: function(){
+                this.win = false
+            },
+            shutDown: function(){
+                this.win = true;
+                this.show = true;
+                this.imageName = "img/default.png"
+            },
+            //Profile~~~     
+            showProfile: function(){
+                this.table = false;
+                this.tableProfile = true;
+            },
+            pro_about: function(){
+                this.show = true;
+                this.imageName = "img/about.png";
+            },
+            pro_hobby: function(){
+                this.show = true;
+                this.imageName = "img/hobby.png";
+            },
+            pro_book: function(){
+                this.show = true;
+                this.imageName = "img/book.png";
+            },
+            pro_back: function(){
+                this.table = true;
+                this.tableProfile = false;
+            },
+            //Webpage~~
+            showWeb: function(){
+                this.table = false;
+                this.tableWeb = true;
+            },
+            web_osakahu: function(){
+                this.show = false;
+                this.webUrl = "https://www.osakafu-u.ac.jp/";
+            },
+            web_y: function(){
+                this.show = false;
+                this.webUrl = "https://ja.wikipedia.org/wiki/%E5%A4%A7%E9%98%AA%E5%BA%9C%E7%AB%8B%E5%A4%A7%E5%AD%A6";
+            },
+            web_g:  function(){
+                this.show = false;
+                this.webUrl = "https://www.upc-osaka.ac.jp/";
+            },
+            web_back: function(){
+                this.table = true;
+                this.tableWeb = false;
+            },
         }
     });
 }
